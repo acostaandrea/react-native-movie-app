@@ -1,14 +1,21 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import "./global.css"
-import { NowPlayingAction } from '@/core/actions/movies/now-paying.action'
+import { View, Text } from "react-native";
+import React from "react";
+import "./global.css";
+import { 
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+import { Stack } from "expo-router";
 
-const Layout = () => {  
+const Layout = () => {
+  const queryClient = new QueryClient();
   return (
-    <View className='px-6'>
-      <Text className='text-3xl'>Layout</Text>
-    </View>
-  )
-}
+    <QueryClientProvider client={queryClient}>
+      <Stack screenOptions={ {
+        headerShown: false      
+      }}/>
+    </QueryClientProvider>
+  );
+};
 
-export default Layout
+export default Layout;
