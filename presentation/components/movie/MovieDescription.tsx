@@ -9,7 +9,7 @@ interface Props{
 
 const MovieDescription = ({movie}:Props) => {
   return (
-    <View className='mx-5 '>
+    <View className='mx-5'>
       <View className='flex flex-row'>
         <Text >{movie.rating}</Text>
         <Text> - {movie.genres.join(', ')}</Text>
@@ -17,8 +17,7 @@ const MovieDescription = ({movie}:Props) => {
       <Text className='font-bold mt-5'>Historia</Text>
       <Text className='font-normal mt-2'>{movie.description}</Text>
       <Text className='font-bold mt-5'>Presupuesto</Text>
-      <Text className='font-normal mt-2'>{Formatter.currency(movie.budget)}</Text>
-      <Text className='font-bold mt-5'>Actores</Text>
+      <Text className='font-normal mt-2'>{Formatter.currency(movie.budget)}</Text>     
 
     </View>
   )
