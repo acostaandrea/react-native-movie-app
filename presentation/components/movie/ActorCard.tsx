@@ -13,6 +13,7 @@ export const ActorCard = ({ actor }: Props) => {
         source={{ uri: actor.avatar }}
         className="w-[100px] h-[150] rounded-2xl shadow"
         resizeMode="cover"
+        testID="actor-avatar"
       />
 
       <View>
